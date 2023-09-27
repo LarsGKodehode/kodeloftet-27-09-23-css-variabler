@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,17 +22,13 @@
     >
       <a href="/">
         <!-- SVG "bilder" er veldig likt HTML, begge kommer fra XML (eXtended Markup Language) -->
-        <svg
-          class="w-16 hover-scale-105"
-          viewBox="0 0 100 100"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg class="w-16 hover-scale-105" viewBox="0 0 100 100">
           <circle cx="50" cy="50" r="50" fill="purple" />
           <circle cx="50" cy="50" r="50" fill="orange">
             <!-- Disse kan og lett animeres, vi skal se på CSS Animation, men dette kan være interssant for nysgjerrig -->
             <animate
               attributeName="r"
-              values="50;45;50"
+              values="50;40;50"
               dur="2s"
               repeatCount="indefinite"
             />

@@ -1,4 +1,17 @@
 /* Spacing */
+
+/* 
+  Her bruker vi en standard måleenhet for
+  å sørge for at det meste havner i bestemte
+  størrelser. Du kan tenke på denne filen som en
+  palette, ikke for farger, men for avstander
+  og størrelser
+*/
+
+:root {
+  --spacing-base: 2px;
+}
+
 /*
   Det er mange variasjoner av padding og
   margin som kan være greit å ha tilgjengelig.
@@ -6,9 +19,6 @@
   men ikke for mye. Vi bruker en base verdi
   og de restrerendes
 */
-:root {
-  --spacing-base: 2px;
-}
 
 .p-0 {
   padding: calc(var(--spacing-base) * 0);
@@ -236,18 +246,35 @@
   margin: calc(var(--spacing-base) * 64);
 }
 
-/* En maks bredde er veldig greit å bruke for å samle tekst*/
+/*
+  For å sørge for at tekstlinjene dine ikke blir en 2 km brede
+  så er et tips å sette en maks bredde på enten hvert
+  enkelt element, eller pakke flere <p> inn i
+  en <element class="max-w-md">
+*/
 .max-w-sm {
-  max-width: 200px;
+  max-width: calc(var(--spacing-base) * 100);
 }
 .max-w-md {
-  max-width: 400px;
+  max-width: calc(var(--spacing-base) * 200);
 }
 .max-w-lg {
-  max-width: 700px;
+  max-width: calc(var(--spacing-base) * 350);
 }
 
 /* Sizes*/
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/*
+  Eksakte størrelser er ikke anbefalt å bruke,
+  det er som regel bedre å bruke noe som kan skalere
+  bra på forskjellige skjermstørrelser. Men
+  av og til kan de være hendig å ha, spesielt for
+  elementer som <svg> eller det du tenker på som Ikoner
+*/
 .w-0 {
   width: calc(var(--spacing-base) * 0);
 }
@@ -289,10 +316,6 @@
 }
 .w-64 {
   width: calc(var(--spacing-base) * 64);
-}
-
-.min-h-screen {
-  min-height: 100vh;
 }
 
 .h-0 {
@@ -338,7 +361,7 @@
   height: calc(var(--spacing-base) * 64);
 }
 
-/* Flex Gap*/
+/* Avstander i mellom flex og grid elementer */
 .gap-0 {
   gap: calc(var(--spacing-base) * 0);
 }
