@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="style/overrides.css" />
+    <link rel="stylesheet" href="style/palette.css" />
+    <link rel="stylesheet" href="style/spacing.css" />
+    <link rel="stylesheet" href="style/utilities.css" />
+    <link rel="stylesheet" href="style/effects.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS Variabler</title>
+  </head>
+
+  <body class="flex-col min-h-screen bg-secondary">
+    <header
+      id="Header"
+      class="bg-primary fg-secondary flex justify-between px-4 py-2 items-center"
+    >
+      <a href="/">
+        <!-- SVG "bilder" er veldig likt HTML, begge kommer fra XML (eXtended Markup Language) -->
+        <svg
+          class="w-16 hover-scale-105"
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="50" cy="50" r="50" fill="purple" />
+          <circle cx="50" cy="50" r="50" fill="orange">
+            <!-- Disse kan og lett animeres, vi skal se på CSS Animation, men dette kan være interssant for nysgjerrig -->
+            <animate
+              attributeName="r"
+              values="50;45;50"
+              dur="2s"
+              repeatCount="indefinite"
+            />
+          </circle>
+        </svg>
+      </a>
+
+      <nav>
+        <ul class="flex gap-16">
+          <li class="hover-scale-105">
+            <a href="#color-palettes">Paletter</a>
+          </li>
+
+          <li class="hover-scale-105">
+            <a href="#css-variables">CSS Variabler</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="grow flex-col">
+      <section id="section-hero" class="min-h-screen flex-col justify-center">
+        <h1 class="fg-secondary text-center p-12 glass-smoked">
+          CSS Variabler
+        </h1>
+      </section>
+
+      <section id="color-palettes" class="flex-col items-center p-16">
+        <h2 class="underline fg-primary">Farge Paletter</h2>
+        <div class="max-w-lg py-8">
+          <p class="m-0">
+            Når vi lager nettsider eller nettappliksjoner så bruker vi som regel
+            ikke alle mulige farger, men heller et lite utvalg som designerne
+            har satt. Det vi kaller en farge palette.
+          </p>
+        </div>
+      </section>
+
+      <section id="css-variables" class="flex-col items-center p-16">
+        <h2 class="underline fg-primary">CSS Variabler</h2>
+        <div class="max-w-lg py-8 flex-col gap-8">
+          <p>
+            Å sette spesefikke farger, ie
+            <code class="bg-gray rounded-sm px-4">#f0f0f0</code> eller
+            <code class="bg-gray rounded-sm px-2 py-1">rgb(255, 255, 255)</code
+            >, i hver klasse som du ønsker skal ha fargen kan være noe
+            tungvindt. Det er og et problem viss du i ettertid bestemmer deg for
+            å bytte ut farge paletten for en ny en. De som har satt opp CSS har
+            heldigvis tenkt over det problemet her.
+          </p>
+
+          <p>
+            CSS variabler er veldig grei å bruke for akkurat dette. Det gjør det
+            enkelt for oss å legge til farge paletter og updatere de når vi
+            ønsker å prøve noe nytt
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-primary fg-secondary py-12">
+      <p class="text-center">By <span class="italic">Lars Gunnar</span></p>
+    </footer>
+  </body>
+</html>

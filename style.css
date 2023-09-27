@@ -1,0 +1,6 @@
+/* Bespoke CSS*/
+#section-hero {
+  background-image: url("assets/example.webp");
+  background-position: center;
+  background-size: cover;
+}

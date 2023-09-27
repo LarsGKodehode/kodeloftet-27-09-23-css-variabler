@@ -1,0 +1,28 @@
+/* Glass Morphisme */
+/* From https://css.glass */
+.glass-smoked {
+  background: rgba(77, 77, 77, 0.31);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.glass-frosted {
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.7px);
+  -webkit-backdrop-filter: blur(12.7px);
+}
+
+/* Hover effekter */
+.hover-scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover-scale-110:hover {
+  transform: scale(1.1);
+}
+
+.hover-scale-115:hover {
+  transform: scale(1.15);
+}

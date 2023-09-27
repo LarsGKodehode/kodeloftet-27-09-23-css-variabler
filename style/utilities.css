@@ -1,0 +1,61 @@
+/* Utility Klasser*/
+
+/* Layout */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Typography */
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/* Shapes */
+:root {
+  --radius-base: 1px;
+}
+
+.rounded-sm {
+  border-radius: calc(var(--radius-base) * 2);
+}
+
+.rounded-md {
+  border-radius: calc(var(--radius-base) * 4);
+}
+
+.rounded-lg {
+  border-radius: calc(var(--radius-base) * 8);
+}
+
+.rounded-full {
+  border-radius: calc(var(--radius-base) * 9999999999);
+}
